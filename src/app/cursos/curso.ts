@@ -8,5 +8,4 @@ export class Curso {
    duration: number;
    rating: number;
    releaseDate: string;
-
 }
