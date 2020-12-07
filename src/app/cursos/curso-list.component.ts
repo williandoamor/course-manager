@@ -21,10 +21,10 @@ export class CursoListComponet implements OnInit {
                 name: 'Angular: Forms',
                 imageUrl: '/assets/imagens/forms.png',
                 price: 99.99,
-                code: 'xps-8796',
+                code: 'XPS-8796',
                 duration: 120,
                 rating: 5.4,
-                releaseDate: 'November, 2, 2019'
+                releaseDate: 'November, 2, 2019.'
             },
             {
                 id: 2,
@@ -34,7 +34,7 @@ export class CursoListComponet implements OnInit {
                 code: 'LKL-1894',
                 duration: 80,
                 rating: 4,
-                releaseDate: 'November, 04, 2019'
+                releaseDate: 'November, 04, 2019.'
             }
 
         ]
