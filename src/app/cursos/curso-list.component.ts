@@ -2,11 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Curso } from './curso';
 import { CursoService } from './curso.service';
 
-@Component({
-
-    selector: 'app-curso-list',
+@Component({   
     templateUrl: './curso-list.component.html'
-
 })
 
 export class CursoListComponet implements OnInit {
