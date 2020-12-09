@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { Component, NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms'
 import { AppComponent } from './app.component';
 import { CursoListComponet } from './cursos/curso-list.component';
@@ -23,6 +24,7 @@ import { CursoInfoComponent } from './cursos/curso.info.component';
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     RouterModule.forRoot([
       {
         path: '', redirectTo: 'cursos', pathMatch: 'full'

@@ -28,7 +28,8 @@
                 <app-star [rating]="curso.rating"></app-star>
             </td>
             <td>
-                 <a [routerLink]="['/cursos/info/', curso.id]" class="btn btn-primary">Edit</a>
+                <a [routerLink]="['/cursos/info/', curso.id]" class="btn btn-primary mr-2">Edit</a>
+                <button (click)="deleteById(curso.id)" class="btn btn-danger">Excluir</button>
             </td>
         </tr>
     </tbody>

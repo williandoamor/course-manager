@@ -1,7 +1,7 @@
 <h2>Curso Info</h2>
 <br />
 
-<form #cursoForm="ngForm">
+<form #cursoForm="ngForm" *ngIf="curso">
     <div class="form-group row">
         <label class="col-sm-2 col-label">Name: </label>
         <div class="col-sm-10">
@@ -49,6 +49,6 @@
             </div>
         </div>
     </div>
-    <button [routerLink]="['/cursos']"  class="btn btn-secondary mr-2">Voltar</button>
+    <button [routerLink]="['/cursos']" class="btn btn-secondary mr-2">Voltar</button>
     <button [disabled]="cursoForm.invalid" (click)="salvarCurso()" class="btn btn-primary mr-2">Salvar</button>
 </form>
