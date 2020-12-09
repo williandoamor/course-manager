@@ -1,0 +1,54 @@
+<h2>Curso Info</h2>
+<br />
+
+<form #cursoForm="ngForm">
+    <div class="form-group row">
+        <label class="col-sm-2 col-label">Name: </label>
+        <div class="col-sm-10">
+            <input [(ngModel)]="curso.name" required name="name" #cursoName="ngModel"
+                [ngClass]="{'is-invalid': cursoName.invalid}" class="form-contol">
+
+            <div class="invalid-feedback">
+                <span>O nome do curso é requerido</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-2 col-label">Preço: </label>
+        <div class="col-sm-10">
+            <input [(ngModel)]="curso.price" required name="price" #cursoPrice="ngModel"
+                [ngClass]="{'is-invalid': cursoPrice.invalid}" type="number" class="form-contol">
+
+            <div class="invalid-feedback">
+                <span>O valor do curso é requerido</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-2 col-label">Classificação: </label>
+        <div class="col-sm-10">
+            <input [(ngModel)]="curso.rating" required name="rating" #cursoRating="ngModel"
+                [ngClass]="{'is-invalid': cursoRating.invalid}" type="number" class="form-contol">
+
+            <div class="invalid-feedback">
+                <span>A classificacao do curso é requerida</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-2 col-label">Descrição: </label>
+        <div class="col-sm-10">
+            <textarea [(ngModel)]="curso.description" required name="description" #cursoDescription="ngModel"
+                [ngClass]="{'is-invalid': cursoDescription.invalid}" class="form-contol">
+            </textarea>
+            <div class="invalid-feedback">
+                <span>A descrição do curso deve ser informada.</span>
+            </div>
+        </div>
+    </div>
+    <button [routerLink]="['/cursos']"  class="btn btn-secondary mr-2">Voltar</button>
+    <button [disabled]="cursoForm.invalid" (click)="salvarCurso()" class="btn btn-primary mr-2">Salvar</button>
+</form>

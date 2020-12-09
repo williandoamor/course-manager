@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms'
 import { AppComponent } from './app.component';
@@ -8,6 +8,7 @@ import { StarComponet } from './star/star.component';
 import { ReplacePipe } from './pipe/replace.pipe';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { Error404Component } from './error-404/error-404.component';
+import { CursoInfoComponent } from './cursos/curso.info.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { Error404Component } from './error-404/error-404.component';
     StarComponet,
     ReplacePipe,
     NavBarComponent,
-    Error404Component
+    Error404Component,
+    CursoInfoComponent
   ],
   imports: [
     BrowserModule,
@@ -24,6 +26,9 @@ import { Error404Component } from './error-404/error-404.component';
     RouterModule.forRoot([
       {
         path: '', redirectTo: 'cursos', pathMatch: 'full'
+      },
+      {
+        path: 'cursos/info/:id', component: CursoInfoComponent
       },
       {
         path: 'cursos', component: CursoListComponet
